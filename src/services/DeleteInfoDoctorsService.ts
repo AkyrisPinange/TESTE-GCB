@@ -9,6 +9,6 @@ export class DeleteInfoDoctorsService {
       return new Error("Medico não Existe");
     }
      
-    await repo.delete(id);
+    await repo.softDelete(id);
   }
 }

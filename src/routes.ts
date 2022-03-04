@@ -10,6 +10,8 @@ import { DeleteAdresscontroller } from './controllers/DeleteAdressController';
 import { CreateSpecialtiesController } from './controllers/CreateSpecialtiesControllers';
 import { GetAllSpecialtiesController } from './controllers/GetAllSpecialtiesController';
 import { InsertDoctorSpecialtiesControlller } from './controllers/InsertDoctorSpecialtiesController';
+import { GetAllController } from './controllers/GetAllController';
+import { GetCepController } from './controllers/GetCepController';
 
 const routes = Router();
 
@@ -33,4 +35,9 @@ routes.get("/Specialties", new GetAllSpecialtiesController().handle);
 //rotas para DoctorSpecialidade
 routes.post("/InfoDoctorsSpecialties", new InsertDoctorSpecialtiesControlller().handle);
 routes.delete("/InfoDoctorsSpecialties/:id_doctor", new DeleteInfoDoctorsController().handle);
+
+routes.get("/InfoDoctorsSpecialties", new GetAllController().handle)
+
+routes.post("/CEP/:cep", new GetCepController().handle)
+
 export { routes };

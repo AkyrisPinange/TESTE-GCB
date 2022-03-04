@@ -11,7 +11,7 @@ export class DeleteAdressService{
             return new Error("Endereço não Existe");
         }
 
-        await repo.delete(id);
+        await repo.softDelete(id);
 
     }
 

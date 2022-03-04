@@ -12,6 +12,7 @@ export class CreateSpecialtiesService {
     const specialties = repo.create({
       name,
     });
+  
 
     await repo.save(specialties);
 

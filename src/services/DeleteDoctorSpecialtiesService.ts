@@ -11,7 +11,7 @@ export class DeleteDoctorSpecialtiesService{
             return new Error("ID do Medicos não existe");
         }
 
-        await repo.delete(id_doctor);
+        await repo.softDelete(id_doctor);
     }
 
 }
