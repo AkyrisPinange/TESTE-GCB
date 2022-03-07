@@ -6,7 +6,7 @@ import { Request, Response } from 'express';
 export class DeleteDoctorSpecialtiesController{
     async handle(request:Request,response:Response){
         const{id_doctor} = request.params;
-
+     
         const service =  new DeleteDoctorSpecialtiesService();
 
         const result = await service.execute(id_doctor);

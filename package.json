@@ -4,7 +4,7 @@
   "main": "server.ts",
   "license": "MIT",
   "scripts": {
-    "star": "src/server.ts",
+    "start": "src/server.ts",
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "typeorm": "ts-node-dev node_modules/.bin/typeorm"
   },
