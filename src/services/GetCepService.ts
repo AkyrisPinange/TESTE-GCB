@@ -1,6 +1,5 @@
 import { consultarCep } from "correios-brasil";
-import Adress from "../entities/Adress";
-import { response } from "express";
+
 
 type CepRequest = {
   cep: string;

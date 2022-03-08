@@ -5,7 +5,7 @@ export class InsertDoctorSpecialtiesControlller {
   async handle(request: Request, response: Response) {
     const { id_doctor, id_specialties } = request.body;
 
-    console.log(id_doctor, id_specialties);
+    
 
     const service = new InsertDoctorSpecialtiesService();
 

@@ -18,11 +18,10 @@ export class UpdateInfoDoctorsService {
     telCelular,
   }: InfoDoctorUpdateRequest) {
     const repo = getRepository(InfoDoctor);
-
     const infoDoctor = await repo.findOne(id);
 
-    if(!infoDoctor){
-        return new Error("O Medicos não existe!")
+    if (!infoDoctor) {
+      return new Error("O Medicos não existe!");
     }
 
     infoDoctor.nome = nome ? nome : infoDoctor.nome;
@@ -33,7 +32,5 @@ export class UpdateInfoDoctorsService {
     await repo.save(infoDoctor);
 
     return infoDoctor;
-
-
   }
 }

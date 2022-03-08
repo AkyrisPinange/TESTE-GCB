@@ -7,7 +7,8 @@ import { Column,
         UpdateDateColumn, 
         ManyToOne, 
         OneToMany, 
-        PrimaryColumn} from 'typeorm';
+        PrimaryColumn,
+        DeleteDateColumn} from 'typeorm';
 import {v4 as uuid} from "uuid"
 
 @Entity('InfoDoctors')
@@ -35,6 +36,9 @@ export default class InfoDoctor {
 
     @UpdateDateColumn()
     Updated_at: Date;
+
+    @DeleteDateColumn()
+    deleted_at: Date;
 
     constructor(){
 

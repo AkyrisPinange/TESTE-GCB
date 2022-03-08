@@ -26,7 +26,7 @@ export class CreateInfoDoctorsService {
       telFixo,
       telCelular
     });
-    console.log(infoDoctor);
+    
 
     await repo.save(infoDoctor);
 

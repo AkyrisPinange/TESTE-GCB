@@ -8,6 +8,7 @@ export class UpdateInfodoctorsController {
 
     const service = new UpdateInfoDoctorsService();
 
+    console.log(id)
     const result = await service.execute({
       id,
       nome,
@@ -16,6 +17,8 @@ export class UpdateInfodoctorsController {
       telCelular
     });
 
+    
+    console.log(id);
     if(result instanceof Error){
 
         return response.status(400).json(result.message);
